@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.matsuhiro.android.appstatuswatcher.widget.SystemOverlayLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#88000000"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/overlay_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/overlay_app_ram"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/overlay_app_cpu"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/overlay_app_time"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</com.matsuhiro.android.appstatuswatcher.widget.SystemOverlayLinearLayout>
