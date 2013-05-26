@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.io.File;
+
 public class MenuFragment extends ListFragment {
 
     private String TRACE_FILES_DIR;
@@ -20,6 +22,10 @@ public class MenuFragment extends ListFragment {
         TRACE_FILES_DIR = Environment.getExternalStorageDirectory().toString() + "/Android/data/"
                 + this.getActivity().getPackageName().toString() + "/observational_result";
 
+        File dir = new File(TRACE_FILES_DIR);
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
         return inflater.inflate(R.layout.list, null);
     }
 
