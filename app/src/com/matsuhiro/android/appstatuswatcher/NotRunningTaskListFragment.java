@@ -90,14 +90,11 @@ public class NotRunningTaskListFragment extends Fragment {
         List<String> runningAppNames = new ArrayList<String>();
         for (RunningAppProcessInfo processInfo : runningAppProcesses) {
             runningAppNames.add(processInfo.processName);
-            // Log.d("HOGE", "running : " + processInfo.processName);
         }
 
         PackageManager pm = mActivity.getPackageManager();
         for (final ResolveInfo resolveInfo : pm.queryIntentActivities(
                 new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER), 0)) {
-            // Log.d("HOGE", "launch : " +
-            // resolveInfo.activityInfo.packageName);
             if (runningAppNames.contains(resolveInfo.activityInfo.packageName)) {
                 continue;
             }
